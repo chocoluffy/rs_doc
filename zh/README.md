@@ -5,20 +5,20 @@
 ## SDK安装流程
 1. 把package拖入工程，点击install，会弹出installer。在installer中，点击 Install Reborn SDK
 <div style="display: flex;">
-  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/aab7f8b4de8713792f214e19fa1a8f3d9b845202/images/demo1.png" alt="Image 1" /></div>
-  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo2.png" alt="Image 2" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/aab7f8b4de8713792f214e19fa1a8f3d9b845202/images/demo1.png" alt="Image 1" style="height: 350px;" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo2.png" alt="Image 2" style="height: 350px;" /></div>
 </div>
 
 2. 在SDK tool中login，在RebornScript栏目下点击Install RebornScripts。如图三，安装完成
 <div style="display: flex;">
-  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo3.png" alt="Image 1" /></div>
-  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo4.png" alt="Image 2" /></div>
-  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo5.png" alt="Image 3" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo3.png" alt="Image 1" style="height: 350px;" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo4.png" alt="Image 2" style="height: 350px;" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo5.png" alt="Image 3" style="height: 350px;" /></div>
 </div>
 
 3. RebornScript示例场景
 <div style="display: flex;">
-  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo6.png" alt="Image 1" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo6.png" alt="Image 1" style="height: 350px;" /></div>
 </div>
 
 ## RSNetwork
