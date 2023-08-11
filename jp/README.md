@@ -2,6 +2,25 @@
 
 ご質問がある場合は、[Discordサーバー](https://discord.gg/kFs7h7vtJJ)にご参加いただき、#SDKチャンネルでご質問ください。ドキュメントやAPIの使用方法のいかなる部分についても、説明させていただく準備ができております。
 
+## SDKインストールプロセス
+1. パッケージをプロジェクトにドラッグしてインストールをクリックします。インストーラーが表示されます。インストーラーで、Reborn SDKをインストールをクリックします。
+<div style="display: flex;">
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/aab7f8b4de8713792f214e19fa1a8f3d9b845202/images/demo1.png" alt="画像1" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo2.png" alt="画像2" /></div>
+</div>
+
+2. SDKツールでログインし、RebornScriptセクションでRebornScriptsをインストールをクリックします。画像3に示すように、インストールが完了します。
+<div style="display: flex;">
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo3.png" alt="画像1" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo4.png" alt="画像2" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo5.png" alt="画像3" /></div>
+</div>
+
+3.RebornScript例シーン
+<div style="display: flex;">
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo6.png" alt="画像1" /></div>
+</div>
+
 ## RSNetwork
 
 - `IsNetworkSettled` - このクライアントから見たネットワークが安定しているか確認します。

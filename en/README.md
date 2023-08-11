@@ -2,6 +2,25 @@
 
 If you have any questions, feel free to join our [Discord server](https://discord.gg/kFs7h7vtJJ) and ask in the #SDK channel. We're happy to help clarify any part of the documentation or API usage.
 
+## SDK Installation
+1. Drag the package into the project and click install; an installer will pop up. In the installer, click on Install Reborn SDK.
+<div style="display: flex;">
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/aab7f8b4de8713792f214e19fa1a8f3d9b845202/images/demo1.png" alt="Image 1" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo2.png" alt="Image 2" /></div>
+</div>
+
+2. Log in to the SDK tool and click on Install RebornScripts under the RebornScript section. As shown in Image 3, the installation is complete.
+<div style="display: flex;">
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo3.png" alt="Image 1" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo4.png" alt="Image 2" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo5.png" alt="Image 3" /></div>
+</div>
+
+3. RebornScript Example Scene
+<div style="display: flex;">
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo6.png" alt="Image 1" /></div>
+</div>
+
 ## RSNetwork
 
 - `IsNetworkSettled` - Checks if the network is settled from perspective of this client.
