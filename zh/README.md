@@ -18,7 +18,7 @@
 
 3. RebornScript示例场景
 <div style="display: flex;">
-  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo6.png" alt="Image 1" style="height: 350px;" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo6.png" alt="Image 1" style="height: 150px;" /></div>
 </div>
 
 ## RSNetwork
