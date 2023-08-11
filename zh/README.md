@@ -2,6 +2,25 @@
 
 如果遇到了你解决不了的问题，或者是希望增加API接口来实现更有创意的效果，加入QQ：788916776，和管理员取得联系，我们会最快时间给您技术支持！
 
+## SDK安装流程
+1. 把package拖入工程，点击install，会弹出installer。在installer中，点击 Install Reborn SDK
+<div style="display: flex;">
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/aab7f8b4de8713792f214e19fa1a8f3d9b845202/images/demo1.png" alt="Image 1" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo2.png" alt="Image 2" /></div>
+</div>
+
+2. 在SDK tool中login，在RebornScript栏目下点击Install RebornScripts。如图三，安装完成
+<div style="display: flex;">
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo3.png" alt="Image 1" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo4.png" alt="Image 2" /></div>
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo5.png" alt="Image 3" /></div>
+</div>
+
+3. RebornScript示例场景
+<div style="display: flex;">
+  <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo6.png" alt="Image 1" /></div>
+</div>
+
 ## RSNetwork
 
 - `IsNetworkSettled` - 检查从这个客户端的视角网络是否稳定。
