@@ -6,7 +6,9 @@ Welcome to Reborn!
 
 we recommend to use Unity 2021.
 
-### Languages
+### Quick Links
+
+Due to international creator background, please pick your language to see full SDK documentation. 
 
 - [English](en/README.md)
 - [Chinese](zh/README.md) 
