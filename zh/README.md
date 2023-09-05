@@ -1,6 +1,6 @@
 # 世界创作：Unity C# API文档
 
-ReboSharp 底层是一个将 C# 代码转换为 Reborn 专有汇编语言的编译器。
+ReboSharp 底层是Reborn专有的汇编语言。
 
 支持的 C# 功能：
 

@@ -1,6 +1,6 @@
 # ReboSharp API
 
-ReboSharp, is essentially a compiler converting C# code into Reborn's proprietary assembly language.
+ReboSharp, is essentially a Reborn's proprietary assembly language.
 
 Supported C# functionalities:
 

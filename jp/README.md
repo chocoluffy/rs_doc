@@ -1,7 +1,5 @@
 # ReboSharp APIドキュメント
 
-ReboSharp は、基本的には C# コードを Reborn の独自のアセンブリ言語に変換するコンパイラです。
-
 サポートされている C# の機能：
 
 - 制御構造： 'if'、'else'、'while'、'for'、'do'、'foreach'、'switch'、'return'、'break'、'continue'、および条件ツール（条件？trueOutcome：falseOutcome）を組み込みます。
