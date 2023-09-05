@@ -19,6 +19,7 @@
 - 能够进行自引用函数调用。
 - 直接和间接数据类型转换。
 - 数组结构及其元素访问器。
+- 支持instantiate。
 - 所有内置数学函数。
 - 绕过条件操作（例如，true || ValidateCondition() 不会触发 ValidateCondition()）。
 - 使用 'typeof' 进行类型检索。
@@ -81,6 +82,8 @@
 # 3、本地运行时虚拟环境（RS Runtime Environment）
 
 Reborn 客户端运行时模拟器（简称 RS Runtime Environment）是一个工具，允许您直接在 Unity 中测试您的 Reborn 世界！您可以查看所有对象的状态以直接进行验证。
+
+这是Reborn社区创作者里最受欢迎的测试工具，通过引导创作者在本地支持与生产环境一致的调试与运行环境，帮助创作者高速在本地迭代内容，并在最终确认内容无误后，交由云端分发。
 
 ## 功能介绍
 
