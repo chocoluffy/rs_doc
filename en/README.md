@@ -1,5 +1,24 @@
 # ReboSharp API
 
+ReboSharp, is essentially a compiler converting C# code into Reborn's proprietary assembly language.
+
+Supported C# functionalities:
+
+- Control mechanisms: Incorporates structures like 'if', 'else', 'while', 'for', 'do', 'foreach', 'switch', 'return', 'break', 'continue', and the conditional tool (condition ? trueOutcome : falseOutcome).
+- Type retrieval with 'typeof'.
+- External functions using 'out' or 'ref' attributes (for example, several versions of Physics.Detect()).
+- User-crafted functions: Including those with input values and outputs, along with those that extend and use flexible parameters.
+- User-made attributes.
+- Adopting RebornScript features, inclusive of virtual functions.
+- Interaction with Unity/RS through event responders that take parameters.
+- Embedding variable values within strings.
+- Initial setting of attributes.
+- Ability to make self-referencing function calls.
+- Direct and indirect data type shifts.
+- Array structures and their element accessors.
+- All inherent math functions.
+- Bypass conditional operations (for instance, true || ValidateCondition() won't trigger ValidateCondition()).
+
 If you have any questions, feel free to join our [Discord server](https://discord.gg/kFs7h7vtJJ) and ask in the #SDK channel. We're happy to help clarify any part of the documentation or API usage.
 
 [Download Unity SDK Here](https://reborn-dev.oss-cn-zhangjiakou.aliyuncs.com/4T2M2QiR/RebornSDK_1_5_8.unitypackage)
@@ -26,26 +45,6 @@ If you have any questions, feel free to join our [Discord server](https://discor
 
 
 # ReboSharp Customized Component
-
-ReboSharp, is essentially a compiler converting C# code into Reborn's proprietary assembly language.
-
-Supported C# functionalities:
-
-- Control mechanisms: Incorporates structures like 'if', 'else', 'while', 'for', 'do', 'foreach', 'switch', 'return', 'break', 'continue', and the conditional tool (condition ? trueOutcome : falseOutcome).
-- Type retrieval with 'typeof'.
-- External functions using 'out' or 'ref' attributes (for example, several versions of Physics.Detect()).
-- User-crafted functions: Including those with input values and outputs, along with those that extend and use flexible parameters.
-- User-made attributes.
-- Adopting RebornScript features, inclusive of virtual functions.
-- Interaction with Unity/RS through event responders that take parameters.
-- Embedding variable values within strings.
-- Initial setting of attributes.
-- Ability to make self-referencing function calls.
-- Direct and indirect data type shifts.
-- Array structures and their element accessors.
-- All inherent math functions.
-- Bypass conditional operations (for instance, true || ValidateCondition() won't trigger ValidateCondition()).
-
 
 Below is some more customized functions for easier content creation. 
 

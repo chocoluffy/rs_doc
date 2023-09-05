@@ -1,5 +1,24 @@
 # 世界创作：Unity C# API文档
 
+ReboSharp 底层是一个将 C# 代码转换为 Reborn 专有汇编语言的编译器。
+
+支持的 C# 功能：
+
+- 控制机制：包括 'if'、'else'、'while'、'for'、'do'、'foreach'、'switch'、'return'、'break'、'continue' 和条件工具（条件？trueOutcome：falseOutcome）。
+- 使用 'out' 或 'ref' 属性的外部函数（例如，多个版本的 Physics.Detect()）。
+- 用户自定义函数：包括具有输入值和输出值的函数，以及那些扩展并使用灵活参数的函数。
+- 用户自定义属性。
+- 采用 RebornScript 功能，包括虚拟函数。
+- 通过接受参数的事件响应器与 Unity/RS 进行交互。
+- 在字符串中嵌入变量值。
+- 初始化属性。
+- 能够进行自引用函数调用。
+- 直接和间接数据类型转换。
+- 数组结构及其元素访问器。
+- 所有内置数学函数。
+- 绕过条件操作（例如，true || ValidateCondition() 不会触发 ValidateCondition()）。
+- 使用 'typeof' 进行类型检索。
+
 如果遇到了你解决不了的问题，或者是希望增加API接口来实现更有创意的效果，加入QQ：788916776，和管理员取得联系，我们会最快时间给您技术支持！
 
 [点此处下载Unity SDK](https://reborn-dev.oss-cn-zhangjiakou.aliyuncs.com/4T2M2QiR/RebornSDK_1_5_8.unitypackage)
@@ -25,26 +44,6 @@
 
 
 # ReboSharp 组件能力
-
-ReboSharp 底层是一个将 C# 代码转换为 Reborn 专有汇编语言的编译器。
-
-支持的 C# 功能：
-
-- 控制机制：包括 'if'、'else'、'while'、'for'、'do'、'foreach'、'switch'、'return'、'break'、'continue' 和条件工具（条件？trueOutcome：falseOutcome）。
-- 使用 'out' 或 'ref' 属性的外部函数（例如，多个版本的 Physics.Detect()）。
-- 用户自定义函数：包括具有输入值和输出值的函数，以及那些扩展并使用灵活参数的函数。
-- 用户自定义属性。
-- 采用 RebornScript 功能，包括虚拟函数。
-- 通过接受参数的事件响应器与 Unity/RS 进行交互。
-- 在字符串中嵌入变量值。
-- 初始化属性。
-- 能够进行自引用函数调用。
-- 直接和间接数据类型转换。
-- 数组结构及其元素访问器。
-- 所有内置数学函数。
-- 绕过条件操作（例如，true || ValidateCondition() 不会触发 ValidateCondition()）。
-- 使用 'typeof' 进行类型检索。
-
 
 ## RSNetwork
 
