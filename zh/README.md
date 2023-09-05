@@ -128,8 +128,142 @@ Reborn 客户端运行时模拟器（简称 RS Runtime Environment）是一个�
 - 搭配Reborn的热更新能力，边生成代码，边部署至线上，让你的粉丝们、朋友们在第一时间游玩你的灵感创作。
 
 # 5、常见问题
-<br>
-<br>
+
+1.使用GetComponent<>获取自己编写的脚本？
+具体情况：
+对于自己编写的RebornScript（后续用RS代替），挂载于GameObject上作为组件后希望使用原生的GetComponent<>或者TryGetComponent<>来获取的这个脚本的实例化对象。（注：unity原生的组件例如Audio Source，Transform等不受其影响）
+**建议方案：**
+绕开GetComponent的方式，若有需要获取实例化对象，提前定义好自己编写的类的对象（若有多个则定义数组），在编辑状态下拖拽赋值，这样就不会丢失对象。
+定义一个可能出现的场景：子弹射中角色，角色会对应的受到伤害。会出现的问题：假设角色身上有自定义的RS脚本A，当子弹碰撞到角色时需要调用该脚本中的函数，此时需要知道子弹碰到的角色身上所挂的是A的哪个实例化对象，在不使用Get Component<A>的情况下，可能会出现的问题和解决方案有：
+- 1.子弹上不挂载脚本，角色的RS脚本A中加入碰撞事件，根据名字来判断子弹的类型（现在还无法使用tag和layer），并相应的调用函数，问题是参数与对于不同种类子弹的响应只能通过名字的字符串来进行识别，非常不方便。
+- 2.在子弹上挂载一个RS脚本B，其中定义好子弹本身的信息，包括种类、伤害。且需要在B中定义一个RS类C（这个C可以理解为控制全局的脚本，C的实例中已经定义了N个RS类A且已被赋值），当子弹碰撞时，会回调B脚本中的碰撞事件（RebornScript中有可以重载的OnPlayerTrigger/Enter/Exit的方法，可以直接获取到RSPlayer对象），根据碰撞到的RSPlayer实例，可以获取到碰撞角色的ID，子弹的B脚本将获取到的ID以及自身的信息作为参数，传入C脚本，C脚本中编写对应的函数来实现对角色产生相应伤害的功能（例如调用A的某个函数）。
+代码示例如下(方法二)：
+```csharp
+//用来管理角色的RS脚本A
+public class A : RebornScriptBehaviour
+{
+    //eg:
+    public string name;
+    public int id;
+    public int hp;
+    
+    //当玩家被子弹射中时受到一点伤害
+    public void Damage()
+    {
+        if(hp > 0)
+        {
+            hp -= 1;
+        }
+    }
+}
+//挂载在子弹上的B脚本
+public class B : RebornScriptBehaviour
+{
+    public C server;
+    
+    public override void OnPlayerTriggerEnter(RSPlayer player)
+    {
+        //当有玩家被子弹射中时
+        server.Hit(player.playerId);//传入的参数为击中玩家的id
+    }
+}
+//一个控制全局的脚本，完成接受主动方调用，再作用于被动方的任务
+public class C : RebornScriptBehaviour
+{
+    public A[] players;//默认当前角色队列中的下表与玩家playerId相同
+    
+    public void Hit(int playerId)
+    {
+        players[playerId].Damage();
+    }
+}
+```
+总结
+目前绕开Get Component<>的方法实现不同物体间相互作用的方式就是使用一个控制全局的RS类（原则上是一个实例化对象），在一组交互（比如子弹射中角色），子弹为主动方，角色为被动方，主动方需要提前获取全局的RS类的对象，RS类的对象需要提前获取被动方，这样完成一个主动方通知全局，全局通知被动方的过程。
+
+
+2.使用RSSync脚本时，需要注意拥有权的问题。
+具体情况：
+对于在各个客户端中同步的物体（挂载了RSSync脚本），同时只有一个客户端对这个物体持有拥有权，只有持有拥有权的客户端对这个物体进行修改，例如改变位置，旋转等，才会被同步到所有的客户端。
+**建议方案：**
+对于需要使用到RSSync同步的应用场景（例如场景中一些同时只能被唯一一个玩家持有且其他玩家需要能看到此物体运动的情况），开发者需要使用：
+```csharp
+if(RSNetwork.LocalPlayer == RSNetwork.GetOwner(gameObject))
+{
+    //逻辑 产生的效果将被同步到各个客户端
+}
+```
+除此之外，受到网络影响，某些物体可能会因为玩家本地的网络波动而丢失拥有者，这种问题尤其在房主切换场景时会频繁出现，因此为了确保代码的安全性与有效性，我们建议开发者将所有需要同步的物体的拥有权强制交给房主，这样可以避免原房主或某个同步物体拥有者退出房间时带来的不良影响。例子如下：
+```csharp
+if(RSNetwork.IsMaster)//判断本地玩家是否为房主
+{
+    RSNetwork.SetOwner(RSNetwork.LocalPlayer,gameObject); //将当前RS脚本所在物体的拥有权交予本地玩家（房主）
+}
+```
+
+3.对于获取当前房间内游戏玩家的GameObject，需要实时获取并更新
+具体情况：
+当开发者需要获取到不同玩家的位置信息（例如多人对战中小地图显示自己与队友的功能）时，毫无疑问是需要获取到当前房间内其他玩家的position等信息的，但是目前如果使用如下的方法：
+```csharp
+//请注意以下的方法是不足够好的形式，仅供与更好的方法对比参考使用
+//假设我有一个自己定义的RS脚本Example
+public class Example : RebornScriptBehaviour
+{
+    public GameObject parter1;//我的一号队友
+    public GameObject parter2;//我的二号队友
+    
+    public void Init()
+    {
+        RSPlayer[] netPlayerList = RSPlayer.GetAllPlayers();//此处默认当前玩家队列内人数大于等于三人
+        //没有netPlayerList[0]是因为还有房主/本地玩家自己。
+        parter1 = netPlayerList[1];
+        parter2 = netPlayerList[2];
+    }
+    public void Update()
+    {
+        Debug.Log(parter1.transform.position);//打印一号队友当前的位置
+        Debug.Log(parter1.transform.position);//打印二号队友当前的位置
+    }
+    
+}
+```
+以上的情况下，打印出的结果大概率是调用Init函数时角色所存在的位置且不会随着其他玩家的改变而打印出正确的位置。因此我们更推荐如下的形式：
+```csharp
+public class Example : RebornScriptBehaviour
+{
+
+    public void Update()
+    {
+        RSPlayer[] netPlayerList = RSPlayer.GetAllPlayers();//此处默认当前玩家队列内人数大于等于三人
+        Debug.Log(netPlayerList[1].gameObject.transform.position);//打印一号队友当前的位置
+        Debug.Log(netPlayerList[1].gameObject.transform.position);//打印二号队友当前的位置
+        
+        //此处附上获取本地玩家的方法:
+       //Network.LocalPlayer.gameObject
+    }
+    
+}
+```
+也就是在需要实时更新的场景下，在Update()中实时获取房间内的玩家队列并获取需要的玩家对象。这并不会对效率产生很大的影响，请放心使用。
+
+
+4.RS脚本方法希望直接被UnityAction引用
+建议方案：
+通过在方法外包一层来实现带参数的引用
+```csharp
+public int index;
+
+public void MyFunc(int n)
+{
+    // My function
+}
+
+//在方法内调用这个
+public void MyFuncButton()
+{
+    MyFunc(index);
+}
+```
 
 # 6、ReboSharp API接口
 
