@@ -23,6 +23,28 @@
   <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/demo6.png" alt="画像1" style="height: 150px;" /></div>
 </div>
 
+
+# ReboSharp カスタマイズコンポーネント
+ReboSharp は、基本的には C# コードを Reborn の独自のアセンブリ言語に変換するコンパイラです。
+
+サポートされている C# の機能：
+
+- 制御構造： 'if'、'else'、'while'、'for'、'do'、'foreach'、'switch'、'return'、'break'、'continue'、および条件ツール（条件？trueOutcome：falseOutcome）を組み込みます。
+- 条件操作のバイパス（たとえば、true || ValidateCondition() は ValidateCondition() をトリガーしません）。
+- 'typeof' での型取得。
+- 'out' または 'ref' 属性を使用した外部関数（例：Physics.Detect() のいくつかのバージョン）。
+- ユーザー定義関数：入力値と出力値を持つもの、拡張機能と柔軟なパラメータを使用するものを含みます。
+- ユーザー定義の属性。
+- RebornScript の機能を採用し、仮想関数を含む。
+- パラメータを取るイベントレスポンダーを通じて Unity/RS と対話。
+- 文字列内に変数値を埋め込む。
+- 属性の初期設定。
+- 自己参照関数呼び出しが可能。
+- 直接および間接的なデータ型の変換。
+- 配列構造とその要素のアクセサ。
+- すべての組み込み数学関数。
+
+
 ## RSNetwork
 
 - `IsNetworkSettled` - このクライアントから見たネットワークが安定しているか確認します。
