@@ -130,7 +130,8 @@ Reborn 客户端运行时模拟器（简称 RS Runtime Environment）是一个�
 # 5、常见问题
 
 1.使用GetComponent<>获取自己编写的脚本？
-具体情况：
+
+**具体情况：**
 对于自己编写的RebornScript（后续用RS代替），挂载于GameObject上作为组件后希望使用原生的GetComponent<>或者TryGetComponent<>来获取的这个脚本的实例化对象。（注：unity原生的组件例如Audio Source，Transform等不受其影响）
 
 **建议方案：**
@@ -185,7 +186,8 @@ public class C : RebornScriptBehaviour
 
 
 2.使用RSSync脚本时，需要注意拥有权的问题。
-具体情况：
+
+**具体情况：**
 对于在各个客户端中同步的物体（挂载了RSSync脚本），同时只有一个客户端对这个物体持有拥有权，只有持有拥有权的客户端对这个物体进行修改，例如改变位置，旋转等，才会被同步到所有的客户端。
 
 **建议方案：**
@@ -204,8 +206,9 @@ if(RSNetwork.IsMaster)//判断本地玩家是否为房主
 }
 ```
 
-3.对于获取当前房间内游戏玩家的GameObject，需要实时获取并更新
-具体情况：
+3.对于获取当前房间内游戏玩家的GameObject，需要实时获取并更新。
+
+**具体情况：**
 当开发者需要获取到不同玩家的位置信息（例如多人对战中小地图显示自己与队友的功能）时，毫无疑问是需要获取到当前房间内其他玩家的position等信息的，但是目前如果使用如下的方法：
 ```csharp
 //请注意以下的方法是不足够好的形式，仅供与更好的方法对比参考使用
@@ -251,7 +254,8 @@ public class Example : RebornScriptBehaviour
 
 
 4.RS脚本方法希望直接被UnityAction引用
-建议方案：
+
+**建议方案：**
 通过在方法外包一层来实现带参数的引用
 ```csharp
 public int index;
