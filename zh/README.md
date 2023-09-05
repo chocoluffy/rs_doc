@@ -23,9 +23,9 @@
 - 绕过条件操作（例如，true || ValidateCondition() 不会触发 ValidateCondition()）。
 - 使用 'typeof' 进行类型检索。
 
-如果遇到了你解决不了的问题，或者是希望增加API接口来实现更有创意的效果，加入QQ：788916776，和管理员取得联系，我们会最快时间给您技术支持！
+绝大多数日常项目用到的C#语法都是兼容的，如果遇到了你解决不了的问题，或者是希望增加API接口来实现更有创意的效果，请不用着急，加入QQ：788916776，和管理员取得联系，我们会最快时间给您技术支持！
 
-# SDK安装流程
+# 1、SDK安装流程
 
 ## SDK下载
 
@@ -57,7 +57,7 @@
 </div>
 
 
-# 本地运行时虚拟环境（RS Runtime Environment）
+# 2、本地运行时虚拟环境（RS Runtime Environment）
 
 Reborn 客户端运行时模拟器（简称 RS Runtime Environment）是一个工具，允许您直接在 Unity 中测试您的 Reborn 世界！您可以查看所有对象的状态以直接进行验证。
 
@@ -70,15 +70,16 @@ Reborn 客户端运行时模拟器（简称 RS Runtime Environment）是一个�
 - 模拟多人联机。
 - 模拟XR、PC、移动端等原生交互环境。
 
+ 
 
-# 自然语言大模型生成代码（Reborn GameGPT）
+# 3、自然语言大模型生成代码（Reborn GameGPT）
 <div style="display: flex;">
   <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/reborn-gamegpt.png" alt="Image 1" style="height: 350px;" /></div>
 </div>
 
-# 常见问题
+# 4、常见问题
 
-# ReboSharp API接口
+# 5、ReboSharp API接口
 
 ## RSNetwork
 
