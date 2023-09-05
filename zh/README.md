@@ -109,11 +109,23 @@ Reborn 客户端运行时模拟器（简称 RS Runtime Environment）是一个�
 - 编程语言灵活性。我们的模型支持针对Unity编程环境的C#、R#语言生成，能够适应不同的开发需求和环境。
 - 减少开发周期。让模型为你做基础代码编写，你将更多的时间可以用于思考游戏设计、复杂代码逻辑和用户体验。
 
+
+体验入口：
+
 <div style="display: flex;">
   <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/master/images/reborn-gamegpt.png" alt="Image 1" style="height: 350px;" /></div>
 </div>
 <br>
 <br>
+- 请注意不要在你的提问里添加特殊标点符号，请以具体的逻辑描述清晰描述你的需求。
+
+
+使用方式：
+
+- 让模型提供从0到1的基础模版，方便创作者快速启动项目。
+- 基于你的已有灵感向Reborn GameGPT直接提问，获取源代码，用于本地Editor的快速调试测试。
+- 针对已有项目已有功能的进一步迭代，寻找更优解法，开拓思路。
+- 搭配Reborn的热更新能力，边生成代码，边部署至线上，让你的粉丝们、朋友们在第一时间游玩你的灵感创作。
 
 # 5、常见问题
 <br>
