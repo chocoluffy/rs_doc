@@ -4,11 +4,11 @@
 
 **ReboSharp 底层是Reborn专有的汇编语言。我们深度改造了底层编译、汇编、运行时解释器与虚拟容器化部署方式，让创作者能用自己熟悉的语言来构建图灵完备的3D内容与应用，无论是专业编程语言比如C#、C++，还是人人都掌握的自然语言。**
 
-专业创作者可以使用C#语法、数据结构、Unity内置接口来构建3D游戏，并借助Reborn SDK进行部署，我们提供了大量可直接使用的功能模块与接口，帮助开发者高效低门槛构建丰富内容生态。
+专业创作者可以使用C#语法、数据结构、Unity内置接口来构建3D游戏，并借助Reborn SDK进行重编译与部署，我们提供了大量可直接使用的功能模块与接口，帮助开发者高效低门槛构建丰富内容生态。
 
-## 支持的 C# 功能：
+## 支持的 C# 功能语法：
 
-- 控制机制：包括 'if'、'else'、'while'、'for'、'do'、'foreach'、'switch'、'return'、'break'、'continue' 和条件工具（条件？trueOutcome：falseOutcome）。
+- 所有逻辑控制机制：包括 'if'、'else'、'while'、'for'、'do'、'foreach'、'switch'、'return'、'break'、'continue' 和条件工具（条件？trueOutcome：falseOutcome）。
 - 使用 'out' 或 'ref' 属性的外部函数（例如，多个版本的 Physics.Detect()）。
 - 用户自定义函数：包括具有输入值和输出值的函数，以及那些扩展并使用灵活参数的函数。
 - 用户自定义属性。
@@ -25,11 +25,14 @@
 
 如果遇到了你解决不了的问题，或者是希望增加API接口来实现更有创意的效果，加入QQ：788916776，和管理员取得联系，我们会最快时间给您技术支持！
 
+# SDK安装流程
+
 ## SDK下载
 
 [点此处下载Unity SDK](https://reborn-dev.oss-cn-zhangjiakou.aliyuncs.com/4T2M2QiR/RebornSDK_1_5_8.unitypackage)
 
-# SDK安装流程
+## SDK安装
+
 1. 把package拖入工程，点击install，会弹出installer。在installer中，点击 Install Reborn SDK
 <div style="display: flex;">
   <div><img src="https://raw.githubusercontent.com/chocoluffy/rs_doc/aab7f8b4de8713792f214e19fa1a8f3d9b845202/images/demo1.png" alt="Image 1" style="height: 350px;" /></div>
