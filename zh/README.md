@@ -2,6 +2,8 @@
 
 如果遇到了你解决不了的问题，或者是希望增加API接口来实现更有创意的效果，加入QQ：788916776，和管理员取得联系，我们会最快时间给您技术支持！
 
+[点此处下载Unity SDK](https://reborn-dev.oss-cn-zhangjiakou.aliyuncs.com/4T2M2QiR/RebornSDK_1_5_8.unitypackage)
+
 ## SDK安装流程
 1. 把package拖入工程，点击install，会弹出installer。在installer中，点击 Install Reborn SDK
 <div style="display: flex;">
