@@ -19,7 +19,7 @@
 
 ご質問がある場合は、[Discordサーバー](https://discord.gg/kFs7h7vtJJ)にご参加いただき、#SDKチャンネルでご質問ください。ドキュメントやAPIの使用方法のいかなる部分についても、説明させていただく準備ができております。
 
-[Unity SDKをこちらでダウンロード](https://reborn-dev.oss-cn-zhangjiakou.aliyuncs.com/4T2M2QiR/RebornSDK_1_5_8.unitypackage)
+[Unity SDKをこちらでダウンロード](https://reborn-dev.oss-cn-zhangjiakou.aliyuncs.com/4T2M2QiR/RebornSDK_1_6_0.unitypackage), Unityのバージョン要件は2022.3.8以上で、新しいURPプロジェクトを作成してください。
 
 ## SDKインストールプロセス
 1. パッケージをプロジェクトにドラッグしてインストールをクリックします。インストーラーが表示されます。インストーラーで、Reborn SDKをインストールをクリックします。

@@ -31,7 +31,7 @@ The vast majority of commonly used C# syntax in daily projects is compatible.If 
 
 ## SDK Download
 
-[Download Unity SDK Here](https://reborn-dev.oss-cn-zhangjiakou.aliyuncs.com/4T2M2QiR/RebornSDK_1_5_8.unitypackage), **Unity version requirements are 2021.3.21 or above, create a new URP project.**
+[Download Unity SDK Here](https://reborn-dev.oss-cn-zhangjiakou.aliyuncs.com/4T2M2QiR/RebornSDK_1_6_0.unitypackage), **Unity version requirements are 2022.3.8 or above, create a new URP project.**
 
 ## SDK Installation
 
