@@ -1,7 +1,7 @@
 # ReboSharp API
 
 ## What is R#(ReboSharp)
-**ReboSharp's underlying is Reborn's proprietary assembly language. We have deeply transformed the underlying compilation, assembly, runtime interpreter and virtual containerized deployment methods, allowing creators to build Turing-complete 3D content and applications in languages they are familiar with, whether professional programming languages like C# and C++, or natural languages that everyone masters. **
+**ReboSharp is Reborn's assembly language. It enables creators to build Turing-complete 3D content and applications in languages they are familiar with, whether professional programming languages like C# and C++, or natural languages that everyone masters. **
 
 Professional creators can use C# syntax, data structures, and built-in Unity interfaces to build 3D games, and use the Reborn SDK for recompilation and deployment. We provide a large number of modules and interfaces that can be used directly to help developers efficiently build a rich content ecosystem with low barriers.
 
