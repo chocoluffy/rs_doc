@@ -34,7 +34,7 @@
 
 ## SDK下载
 
-[点此处下载Unity SDK](https://reborn-dev.oss-cn-zhangjiakou.aliyuncs.com/4T2M2QiR/RebornSDK_1_6_4.unitypackage)，**Unity版本要求在2022.3.8或以上，新建URP工程。**
+[点此处下载Unity SDK](https://reborn-dev.oss-cn-zhangjiakou.aliyuncs.com/4T2M2QiR/RebornSDK_1_6_8.unitypackage)，**Unity版本要求在2022.3.8或以上，新建URP工程。**
 
 ## SDK安装
 
